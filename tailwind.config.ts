@@ -23,6 +23,8 @@ const config: Config = {
         comic: ["var(--font-comic-neue)"],
         bangers: ["var(--font-bangers)"],
         marker: ["var(--font-permanent-marker)"],
+        heading: ['"Bangers"', 'cursive'],
+        body: ['"Inter"', 'sans-serif'],
       },
       colors: {
         // Your JustFix Pro brand colors
