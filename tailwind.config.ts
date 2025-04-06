@@ -17,6 +17,13 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+        comic: ["var(--font-comic-neue)"],
+        bangers: ["var(--font-bangers)"],
+        marker: ["var(--font-permanent-marker)"],
+      },
       colors: {
         // Your JustFix Pro brand colors
         primary: {
