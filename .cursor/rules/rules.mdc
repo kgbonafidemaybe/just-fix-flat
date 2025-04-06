@@ -1,0 +1,121 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+{
+  "rules": [
+    {
+      "name": "Tailwind Classes",
+      "description": "Enforce consistent Tailwind usage",
+      "patterns": [
+        {
+          "when": "using_tailwind_classes",
+          "enforce": "use standard Tailwind classes instead of arbitrary values with square brackets",
+          "examples": {
+            "good": "h-64 w-full text-lg mt-6 p-4",
+            "bad": "h-[600px] w-[42rem] text-[17px] mt-[27px] p-[15px]"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Component Structure",
+      "description": "Standardize component organization",
+      "patterns": [
+        {
+          "when": "creating_components",
+          "enforce": "export named components with proper JSDoc comments",
+          "examples": {
+            "good": "/**\n * Hero section component\n */\nexport function HeroSection() { ... }",
+            "bad": "export default () => { ... }"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Image Handling",
+      "description": "Proper Next.js image usage",
+      "patterns": [
+        {
+          "when": "using_images",
+          "enforce": "use Next.js Image component with proper alt tags, fill prop for responsive images",
+          "examples": {
+            "good": "<Image src=\"/image.jpg\" alt=\"Descriptive alt text\" fill className=\"object-cover\" />",
+            "bad": "<img src=\"/image.jpg\" width=\"400\" height=\"300\" />"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Responsive Design",
+      "description": "Ensure mobile-first approach",
+      "patterns": [
+        {
+          "when": "styling_layouts",
+          "enforce": "use mobile-first approach with responsive class modifiers",
+          "examples": {
+            "good": "flex flex-col md:flex-row items-center",
+            "bad": "flex items-center hidden sm:block"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brand Colors",
+      "description": "Maintain consistent brand colors",
+      "patterns": [
+        {
+          "when": "using_colors",
+          "enforce": "use theme color variables instead of hardcoded values",
+          "examples": {
+            "good": "bg-justfix-blue text-white hover:bg-justfix-blue/90",
+            "bad": "bg-[#0066B3] text-white hover:opacity-90"
+          }
+        }
+      ]
+    },
+    {
+      "name": "SVG Management",
+      "description": "Consistent SVG handling",
+      "patterns": [
+        {
+          "when": "using_svg_icons",
+          "enforce": "prefer imported Lucide icons or inline SVGs with proper viewBox",
+          "examples": {
+            "good": "<Phone className=\"w-5 h-5\" /> or <svg viewBox=\"0 0 24 24\">...</svg>",
+            "bad": "<img src=\"/icon.svg\" width=\"20\" height=\"20\" />"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Component Imports",
+      "description": "Standardize import patterns",
+      "patterns": [
+        {
+          "when": "importing_components",
+          "enforce": "use absolute imports with @/ prefix for project components",
+          "examples": {
+            "good": "import { Button } from \"@/components/ui/button\";",
+            "bad": "import { Button } from \"../../components/ui/button\";"
+          }
+        }
+      ]
+    },
+    {
+      "name": "File Organization",
+      "description": "Maintain consistent file structure",
+      "patterns": [
+        {
+          "when": "creating_files",
+          "enforce": "place components in appropriate directories based on their purpose",
+          "examples": {
+            "good": "components/hero-section.tsx, components/ui/button.tsx",
+            "bad": "HeroSection.js, button.tsx"
+          }
+        }
+      ]
+    }
+  ]
+}
