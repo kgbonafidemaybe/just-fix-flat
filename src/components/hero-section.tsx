@@ -8,7 +8,7 @@ export const HeroSection = () => {
       {/* Electric comic-style background effect */}
       <div className="absolute inset-0 -z-10">
         <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-justfix-darkblue via-justfix-blue to-justfix-blue opacity-40" />
-        <div className="absolute inset-0 rotate-3 bg-repeat opacity-10" style={{ backgroundImage: 'url("/images/comic-lines.svg")' }} />
+        <div className="absolute inset-0 rotate-3 bg-repeat opacity-30" style={{ backgroundImage: 'url("/images/comic-lines.svg")' }} />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">

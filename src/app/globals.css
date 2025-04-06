@@ -123,10 +123,9 @@
 
 /* JustFix Pro Custom Styles */
 html, body {
-  background-color: #0066B3 !important;
   color: white;
 }
 
 body > div {
-  background-color: #0066B3 !important;
+  /* Background color now handled by individual components */
 }
